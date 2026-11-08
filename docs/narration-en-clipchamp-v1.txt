@@ -1,0 +1,17 @@
+Block one.
+An agent that only talks is easy. Then it gets a keyboard. It sorts your list... and on the way out it opens the network, and it reads the secrets. The work was small. The damage is the whole machine.
+
+Block two.
+Prove-It is the page born for that moment. The agent is allowed to run. The machine is not allowed to get hit. On that page you see the claim, and you see the receipt. You let the run through... or you stop it. And that run does not float. It goes through one box.
+
+Block three.
+That box is called Strongbox. The clean claim and the hostile one both have to go through it. Same cage. Same receipt. The page itself lets you run two requests.
+
+Block four.
+On the first, the request reaches for the environment and tries to phone home. The box has no network, and the host's secrets stay out. The page refuses. The attack can print its name. It cannot leave. Stopping that run is the easy part. What is missing is the claim that deserves a yes.
+
+Block five.
+On the second, the claim is the right size. Sort three numbers, and print proved if it holds. The code is already on the page. The box runs it. The exit is zero. Contained stays true. The page approves... and a note from the model does not get to turn a failure into a yes. That yes has to sit on the same receipt as the no.
+
+Block six.
+And it does. The attack and the sort come back the same way. A failed run never becomes a yes. What you claim has to come back from the box. The blast stays in the box.

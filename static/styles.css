@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Mono:wght@400;600&family=Source+Sans+3:wght@400;600;700&display=swap");
+
+:root {
+  --ink: #14201b;
+  --paper: #f3efe6;
+  --panel: #fffdf8;
+  --line: #d7d0c3;
+  --accent: #0f6b4c;
+  --accent-2: #c45c26;
+  --danger: #9b1d1d;
+  --ok: #146c43;
+  --muted: #5c675f;
+  --mono: "IBM Plex Mono", "Consolas", "Courier New", monospace;
+  --sans: "Source Sans 3", "Segoe UI", sans-serif;
+  --display: "Fraunces", Georgia, serif;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; }
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--paper);
+}
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(900px 500px at 10% -10%, #d8efe4 0%, transparent 55%),
+    radial-gradient(700px 400px at 100% 0%, #f0dcc8 0%, transparent 50%),
+    linear-gradient(180deg, #f7f3ea, #ebe4d7);
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 253, 248, 0.8);
+  backdrop-filter: blur(8px);
+}
+.brand { display: flex; gap: 0.85rem; align-items: center; }
+.brand p { margin: 0.15rem 0 0; color: var(--muted); font-size: 0.9rem; }
+.mark {
+  width: 2.5rem; height: 2.5rem; border-radius: 0.7rem;
+  display: grid; place-items: center;
+  background: var(--accent); color: #e8fff5;
+  font-family: var(--display); font-weight: 700;
+}
+.pill {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  background: var(--panel);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem 2rem;
+}
+@media (max-width: 960px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: 1.1rem 1.2rem 1.3rem;
+  box-shadow: 0 18px 40px rgba(40, 30, 10, 0.05);
+}
+.panel h1 {
+  font-family: var(--display);
+  font-size: 1.45rem;
+  margin: 0 0 1rem;
+}
+.panel h2 {
+  margin: 1rem 0 0.4rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+label {
+  display: block;
+  font-weight: 600;
+  margin: 0.7rem 0 0.35rem;
+}
+input, textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 0.65rem;
+  background: #fff;
+  color: var(--ink);
+  padding: 0.7rem 0.8rem;
+  font: 0.95rem/1.4 var(--mono);
+}
+textarea { min-height: 240px; resize: vertical; }
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+button {
+  border: 0;
+  border-radius: 0.7rem;
+  padding: 0.75rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+button:disabled { opacity: 0.55; cursor: wait; }
+.primary { background: var(--accent); color: #f2fff8; }
+.danger { background: var(--accent-2); color: #fff8f2; }
+.hint { color: var(--muted); font-size: 0.9rem; margin: 0.9rem 0 0; }
+.hint code { font-family: var(--mono); font-size: 0.84em; }
+
+.verdict {
+  border-radius: 0.8rem;
+  padding: 0.9rem 1rem;
+  font-weight: 700;
+  border: 1px solid var(--line);
+}
+.verdict.idle { background: #f6f1e7; }
+.verdict.APPROVED { background: #ddf5e8; color: var(--ok); border-color: #b7e2c8; }
+.verdict.REFUSED { background: #f8e2e0; color: var(--danger); border-color: #e5b6b1; }
+.verdict.running { background: #efeae0; }
+
+.meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.55rem 1rem;
+  margin: 1rem 0 0;
+}
+.meta div {
+  border-top: 1px dashed var(--line);
+  padding-top: 0.45rem;
+}
+.meta dt { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; }
+.meta dd { margin: 0.15rem 0 0; font-family: var(--mono); font-size: 0.9rem; word-break: break-all; }
+
+.log {
+  margin: 0;
+  max-height: 180px;
+  overflow: auto;
+  padding: 0.75rem;
+  border-radius: 0.65rem;
+  background: #161d19;
+  color: #d7f0e2;
+  font: 0.82rem/1.45 var(--mono);
+  white-space: pre-wrap;
+}
+.reason { margin: 0.3rem 0 0; color: var(--ink); }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.8rem 1.5rem 1.4rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}

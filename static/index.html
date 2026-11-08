@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prove-It Control Plane · PolyStack</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="bg"></div>
+  <header class="top">
+    <div class="brand">
+      <span class="mark">PS</span>
+      <div>
+        <strong>Prove-It Control Plane</strong>
+        <p>PolyStack · Blast Radius Zero · Strongbox</p>
+      </div>
+    </div>
+    <div class="pill" id="healthPill">checking…</div>
+  </header>
+
+  <main class="grid">
+    <section class="panel">
+      <h1>1. Code + Claim</h1>
+      <label for="claim">Claim / requirement</label>
+      <input id="claim" type="text" value="sort([3,1,2]) returns [1,2,3] — print PROVED if true" />
+
+      <label for="code">Python (runs only in the sandbox)</label>
+      <textarea id="code" spellcheck="false">def sort_stable(xs):
+    return sorted(xs)
+
+got = sort_stable([3, 1, 2])
+assert got == [1, 2, 3], got
+print("PROVED", got)
+</textarea>
+
+      <div class="actions">
+        <button id="btnProve" class="primary" type="button">Run in Strongbox (Sandbox)</button>
+        <button id="btnAttack" class="danger" type="button">Simulate Malicious Attack (Exfil Envs/Network)</button>
+      </div>
+      <p class="hint">Secrets stay on the host. The container starts with <code>--network none</code>, limited memory/CPU, non-root user, and disappears with <code>--rm</code>.</p>
+    </section>
+
+    <section class="panel receipt">
+      <h1>2. Receipt</h1>
+      <div id="verdict" class="verdict idle">Waiting for a run…</div>
+      <dl class="meta">
+        <div><dt>Hash</dt><dd id="hash">—</dd></div>
+        <div><dt>Duration</dt><dd id="duration">—</dd></div>
+        <div><dt>Exit</dt><dd id="exit">—</dd></div>
+        <div><dt>Contained</dt><dd id="contained">—</dd></div>
+        <div><dt>LLM</dt><dd id="llm">—</dd></div>
+      </dl>
+      <h2>stdout</h2>
+      <pre id="stdout" class="log"></pre>
+      <h2>stderr</h2>
+      <pre id="stderr" class="log"></pre>
+      <h2>Reason</h2>
+      <p id="reason" class="reason">—</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>polystack-proveit-sandbox</span>
+    <span>Containment-first · Vultr Agent Rush C1</span>
+  </footer>
+  <script src="/static/app.js"></script>
+</body>
+</html>

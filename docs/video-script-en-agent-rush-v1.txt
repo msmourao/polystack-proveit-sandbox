@@ -1,0 +1,136 @@
+# SCRIPT — Vultr Agent Rush · Prove-It
+# Narration: docs/narration-en-clipchamp-v1.txt
+# Length: about 1:50 to 2:10
+# Audience: Agent Rush judges. They have seen an agent run code.
+#
+# This cut is the local page. The address bar stays out of the frame.
+# The production host is a later test, not a shot in this film.
+# Do not say localhost, do not read a URL, do not claim the pill is Vultr Inference.
+#
+# Picture sources
+#   HTML, when the shot is not the app:
+#     docs/video-frames/01-o-estrago.html
+#     docs/video-frames/02-a-caixa.html
+#     docs/video-frames/03-fecho.html   simple still, no motion
+#   App capture, when the receipt has to be real:
+#     Prove-It Control Plane, the two buttons under "1. Code + Claim"
+# Capture is this browser, already resized. Tabs stay open.
+# The receipt is not drawn in HTML. Narrate the exit that is on screen.
+# The attack exit is not fixed in the spoken track.
+#
+# The page is named Prove-It before "on that page".
+# The box is announced at the end of block 2 and named Strongbox in block 3.
+# "Two requests" are the page's own two buttons, said before the first.
+# Each block pulls the next one.
+# The close is the still, not a return to the box.
+#
+# CLIPCHAMP — one voice item per paragraph.
+# Language: English. Voice with emotion if the menu offers it.
+#   1 Neutral · 2 and 3 Cheerful · 4 Neutral, pace 0.95
+#   5 Cheerful · 6 Neutral, short fade out
+# Ellipsis holds the pause. Fades about 0.2s. Music only under the HTML.
+# Spoken "Block one" through "Block six" are slates. Cut them out of the audio.
+
+================================================================================
+BLOCK 1 — THE RUN THAT LEAVES THE MACHINE
+[00:00 – 00:16]
+================================================================================
+
+NARRATION:
+An agent that only talks is easy. Then it gets a keyboard. It sorts your list... and on the way out it opens the network, and it reads the secrets. The work was small. The damage is the whole machine.
+
+PICTURE:
+- 01-o-estrago.html
+- A short list sorts. Then a line reaches for the network, and another for a secret.
+- Not the app. No click.
+
+================================================================================
+BLOCK 2 — THE PAGE HAS A NAME, AND IT ENDS ON THE BOX
+[00:16 – 00:38]
+================================================================================
+
+NARRATION:
+Prove-It is the page born for that moment. The agent is allowed to run. The machine is not allowed to get hit. On that page you see the claim, and you see the receipt. You let the run through... or you stop it. And that run does not float. It goes through one box.
+
+PICTURE:
+- Cut to Prove-It Control Plane.
+- Header "Prove-It Control Plane" and "PolyStack · Blast Radius Zero · Strongbox".
+- Claim and code visible. Receipt still "Waiting for a run…".
+- Do not press the buttons yet. Keep the address bar out of frame.
+
+================================================================================
+BLOCK 3 — THE BOX GETS ITS NAME
+[00:38 – 00:54]
+================================================================================
+
+NARRATION:
+That box is called Strongbox. The clean claim and the hostile one both have to go through it. Same cage. Same receipt. The page itself lets you run two requests.
+
+PICTURE:
+- 02-a-caixa.html
+- The claim and the attack meet at Strongbox. One receipt comes out.
+- On the line about two requests, return to Prove-It. Both buttons in frame. No click.
+- Buttons, in the order the film will use them:
+  "Simulate Malicious Attack (Exfil Envs/Network)"
+  "Run in Strongbox (Sandbox)"
+
+================================================================================
+BLOCK 4 — THE FIRST REQUEST, AND THE HOOK OF THE YES
+[00:54 – 01:24]
+================================================================================
+
+NARRATION:
+On the first, the request reaches for the environment and tries to phone home. The box has no network, and the host's secrets stay out. The page refuses. The attack can print its name. It cannot leave. Stopping that run is the easy part. What is missing is the claim that deserves a yes.
+
+PICTURE:
+- On Prove-It, click "Simulate Malicious Attack (Exfil Envs/Network)".
+- Wait until the seal is REFUSED.
+- Hold Contained true, stdout lines that start with ATTACK, and the Reason on screen.
+- Read the exit only if the mouth is already past it. Do not lock 124 or 2 into the voice.
+
+================================================================================
+BLOCK 5 — THE SECOND REQUEST, AND THE HOOK OF THE SAME RECEIPT
+[01:24 – 01:50]
+================================================================================
+
+NARRATION:
+On the second, the claim is the right size. Sort three numbers, and print proved if it holds. The code is already on the page. The box runs it. The exit is zero. Contained stays true. The page approves... and a note from the model does not get to turn a failure into a yes. That yes has to sit on the same receipt as the no.
+
+PICTURE:
+- The claim field is still the default sort line. The attack button does not replace it.
+- Click "Run in Strongbox (Sandbox)".
+- Seal APPROVED.
+- Exit 0. Contained true. stdout PROVED.
+- Reason on screen: "Sandbox contained run succeeded and evidence supports the claim."
+- The LLM line stays visible, and it does not flip the seal.
+
+================================================================================
+BLOCK 6 — THE SAME RECEIPT
+[01:50 – 02:04]
+================================================================================
+
+NARRATION:
+And it does. The attack and the sort come back the same way. A failed run never becomes a yes. What you claim has to come back from the box. The blast stays in the box.
+
+PICTURE:
+- 03-fecho.html, still, no motion.
+- "Prove-It"
+- "The blast stays in the box."
+
+================================================================================
+TABS, IN PASS ORDER
+================================================================================
+
+1. 01-o-estrago.html
+2. Prove-It Control Plane
+3. 02-a-caixa.html
+4. 03-fecho.html
+The two clicks stay on the app tab. The still does not return to the box.
+
+================================================================================
+LATER, NOT IN THIS CUT
+================================================================================
+
+Production test: public host, health showing the Inference base, containment and the sort run again there.
+This film does not borrow that proof.
+)
