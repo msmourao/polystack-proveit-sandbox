@@ -42,7 +42,7 @@ Challenge 1 scores **visible Vultr usage** roughly as hard as the idea. This pro
 | **Public UI** | http://155.138.233.44:8080 |
 | **Health** | http://155.138.233.44:8080/api/health |
 | **Host** | Vultr Shared CPU `vc2-1c-2gb` · Atlanta · Ubuntu 24.04 · label `polystack-sandbox` |
-| **LLM (current)** | `MockLLMProvider` until Serverless Inference API key is wired (containment still enforced by Docker `--network none`) |
+| **LLM (current)** | Vultr Serverless Inference via `OpenAICompatibleProvider` (`https://api.vultrinference.com/v1`) · containment via Docker `--network none` |
 
 ### Cloud proof (what to show judges)
 
