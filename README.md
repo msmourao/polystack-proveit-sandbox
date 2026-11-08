@@ -35,6 +35,15 @@ Challenge 1 scores **visible Vultr usage** roughly as hard as the idea. This pro
 
 **Localhost (`127.0.0.1`) is for development only.** Submission video and LabLab demo URL should use the **public Vultr IP/hostname**.
 
+### Live demo (Agent Rush)
+
+| | |
+|--|--|
+| **Public UI** | http://155.138.233.44:8080 |
+| **Health** | http://155.138.233.44:8080/api/health |
+| **Host** | Vultr Shared CPU `vc2-1c-2gb` · Atlanta · Ubuntu 24.04 · label `polystack-sandbox` |
+| **LLM (current)** | `MockLLMProvider` until Serverless Inference API key is wired (containment still enforced by Docker `--network none`) |
+
 ### Cloud proof (what to show judges)
 
 Stamp the run as cloud-side:
